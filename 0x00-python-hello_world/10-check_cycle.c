@@ -16,8 +16,8 @@ int check_cycle(list_t *list)
 		return (0);
 	while (up && down && down->next)
 	{
-		up = uo->next;
-		down = down->next-next;
+		up = up->next;
+		down = down->next->next;
 
 		if (up == down)
 			return (1);
